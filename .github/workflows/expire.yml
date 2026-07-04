@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Remove content after expiry
         run: |
-          NOW=$(date -u +%s); EXP=1783277673
+          NOW=$(date -u +%s); EXP=1783354828
           echo "now=$NOW exp=$EXP"
           if [ "$NOW" -ge "$EXP" ]; then
             printf '%s' '<!doctype html><meta charset=utf-8><title>Срок истёк</title><body style="background:#040b07;color:#9db3a2;font-family:system-ui;display:grid;place-items:center;height:100vh;margin:0"><p>Срок предпросмотра истёк.</p></body>' > index.html
